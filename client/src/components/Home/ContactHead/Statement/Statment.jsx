@@ -1,7 +1,7 @@
 import ContactCard from './ContactCard'
 
 const Statement = () => {
-	return(
+	return (
 		<div className="conStatement">
 			<ContactCard
 				elem={<>

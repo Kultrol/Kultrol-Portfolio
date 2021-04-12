@@ -1,6 +1,5 @@
-
-const ContactCard = ({elem, addClass}) => {
-	return(
+const ContactCard = ( { elem, addClass } ) => {
+	return (
 		<div className={`conCard ${addClass}`}>
 			{elem}
 		</div>
