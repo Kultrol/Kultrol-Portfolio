@@ -7,7 +7,7 @@
     "build": "npm run build --prefix client/build",
     "install-client": "npm install --prefix client",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kevin Medina",
