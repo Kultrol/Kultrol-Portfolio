@@ -1,1 +1,0 @@
-export const URI = "mongodb+srv://Kevin-Medina:okJ14q8BCHUmHnqB@kultrolsite.gkohr.mongodb.net/KultrolSite?retryWrites=true&w=majority"
