@@ -2,7 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import bodyParser from "body-parser";
 import {URI} from './Secrets/URI.js'
-
+import path from 'path'
 const app = express()
 const PORT = process.env.PORT || 5000
 const db = mongoose.connection
@@ -16,9 +16,6 @@ db.once( 'open', function () {
 app.use( bodyParser.json() )
 app.use( bodyParser.urlencoded( { extended: true } ) )
 
-if(process.env.Node_ENV === 'production'){
-	app.use(express.static('../client/build'))
-}
 
 const personalProjectSchema = new mongoose.Schema( {
 	title: String,
@@ -33,6 +30,14 @@ app.route( '/api' )
 		Personal_Projects.find( {} )
 			.then( r => res.send( r ) )
 	} )
+
+if(process.env.Node_ENV === 'production'){
+	app.use(express.static('../client/build'))
+	app.get('*', (req, res) => {
+		res.sendFile(path.resolve('../', 'client', 'build', 'index.html'))
+	})
+}
+
 
 app.listen( PORT, () => {
 	console.log( "Server on http://localhost:5000" )
