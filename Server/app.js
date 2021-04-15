@@ -4,11 +4,8 @@ import bodyParser from "body-parser";
 import {URI} from './Secrets/URI.js'
 
 const app = express()
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 const db = mongoose.connection
-
-app.use( bodyParser.json() )
-app.use( bodyParser.urlencoded( { extended: true } ) )
 
 mongoose.connect( URI, { useNewUrlParser: true, useUnifiedTopology: true } )
 db.on( 'error', console.error.bind( console, 'connection error:' ) );
@@ -16,6 +13,12 @@ db.once( 'open', function () {
 	console.log( "Connected to Database" )
 } );
 
+app.use( bodyParser.json() )
+app.use( bodyParser.urlencoded( { extended: true } ) )
+
+if(process.env.Node_ENV === 'production'){
+	app.use(express.static('../client/build'))
+}
 
 const personalProjectSchema = new mongoose.Schema( {
 	title: String,
