@@ -9,7 +9,7 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 const db = mongoose.connection
-mongoose.connect(`mongodb+srv://Kevin-Medina:${process.env.REACT_APP_API_KEY}@kultrolsite.gkohr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true } )
+mongoose.connect(`mongodb+srv://Kevin-Medina:${process.env.REACT_APP_API_KEY}@kultrolsite.gkohr.mongodb.net/KultrolSite?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true } )
 db.on( 'error', console.error.bind( console, 'connection error:' ) );
 db.once( 'open', function () {
 	console.log( "Connected to Database" )
