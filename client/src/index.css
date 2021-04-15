@@ -109,7 +109,7 @@
 	}
 
 	.footerLink {
-		@apply text-xl text-gray-200 hover:text-gray-300 cursor-pointer
+		@apply text-xl text-gray-200 cursor-pointer hover:underline
 	}
 
 }
