@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "cd client/build && npm run build",
-    "install-client": "cd client && npm install",
+    "build": " --prefix client/build && npm run build",
+    "install-client": "-prefix client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
