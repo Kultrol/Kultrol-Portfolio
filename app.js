@@ -1,13 +1,15 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import bodyParser from "body-parser";
-import {URI} from './Secrets/URI.js'
 import path from 'path'
+import dotenv from 'dotenv'
+dotenv.config()
+
 const app = express()
 const PORT = process.env.PORT || 5000
-const db = mongoose.connection
 
-mongoose.connect( URI, { useNewUrlParser: true, useUnifiedTopology: true } )
+const db = mongoose.connection
+mongoose.connect(`mongodb+srv://Kevin-Medina:${process.env.REACT_APP_API_KEY}@kultrolsite.gkohr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true } )
 db.on( 'error', console.error.bind( console, 'connection error:' ) );
 db.once( 'open', function () {
 	console.log( "Connected to Database" )
@@ -22,6 +24,7 @@ const personalProjectSchema = new mongoose.Schema( {
 	description: String,
 	imgURL: String
 }, { collection: "Personal_Projects" } )
+
 const Personal_Projects = mongoose.model( 'Personal_Projects', personalProjectSchema )
 
 
@@ -31,10 +34,12 @@ app.route( '/api' )
 			.then( r => res.send( r ) )
 	} )
 
+
+
 if(process.env.Node_ENV === 'production'){
 	app.use(express.static('client/build'))
 	app.get('*', (req, res) => {
-		res.sendFile(path.resolve('../', 'client', 'build', 'index.html'))
+		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
 	})
 }
 

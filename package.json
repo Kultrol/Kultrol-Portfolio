@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "mongodb": "^3.6.5"
   },
   "type": "module"
