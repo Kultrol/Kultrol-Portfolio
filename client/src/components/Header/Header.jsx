@@ -18,7 +18,7 @@ export default function Header() {
 						// src="https://www.flaticon.com/svg/vstatic/svg/992/992660.svg?token=exp=1618255540~hmac=7ca5be26e6afa710b47053c72982b5b3"
 						alt="" className="w-12 cursor-pointer"/>
 				</span>
-				<Nav addNavClass={`block`} setMenu={(v) => setShowMenu(v)}/>
+				<Nav addNavClass={`block`} setMenu={( v ) => setShowMenu( v )}/>
 			</div>
 	}
 
@@ -36,7 +36,7 @@ export default function Header() {
 		        <img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" alt=""
 		             className="w-12 cursor-pointer"/>
 	        </span>
-				<Nav setMenu={(v) => setShowMenu(v)}/>
+				<Nav setMenu={( v ) => setShowMenu( v )}/>
 			</header>
 			{hamMenu}
 		</>
