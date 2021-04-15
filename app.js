@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 5000
 
 const db = mongoose.connection
 mongoose.connect(`mongodb+srv://Kevin-Medina:${process.env.REACT_APP_API_KEY}@kultrolsite.gkohr.mongodb.net/KultrolSite?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true } )
+	.then(r => console.log('Connected'))
+	.catch(e => console.log(e))
 db.on( 'error', console.error.bind( console, 'connection error:' ) );
 db.once( 'open', function () {
 	console.log( "Connected to Database" )
@@ -26,7 +28,6 @@ const personalProjectSchema = new mongoose.Schema( {
 }, { collection: "Personal_Projects" } )
 
 const Personal_Projects = mongoose.model( 'Personal_Projects', personalProjectSchema )
-
 
 app.route( '/api' )
 	.get( ( req, res ) => {
