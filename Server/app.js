@@ -1,7 +1,8 @@
-const mongoose = require( "mongoose" )
-const bodyParser = require( "body-parser" )
-const express = require( "express" )
-const URI = "mongodb+srv://Kevin-Medina:okJ14q8BCHUmHnqB@kultrolsite.gkohr.mongodb.net/KultrolSite?retryWrites=true&w=majority"
+import express from 'express'
+import mongoose from 'mongoose'
+import bodyParser from "body-parser";
+import {URI} from './Secrets/URI.js'
+
 const app = express()
 const PORT = 5000
 const db = mongoose.connection
