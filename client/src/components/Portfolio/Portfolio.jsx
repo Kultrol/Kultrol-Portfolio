@@ -8,7 +8,7 @@ const Portfolio = () => {
 	const [curPortfolio, setCurPortfolio] = useState( [] )
 
 	useEffect( () => {
-		axios.get( "/api" )
+		axios.get( "/api/portfolio" )
 			.then( r => setCurPortfolio( r.data ) )
 			.catch( err => console.log( err ) )
 	}, [] )
