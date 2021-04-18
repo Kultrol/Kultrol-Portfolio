@@ -2,7 +2,7 @@ import express from 'express'
 import bodyParser from "body-parser";
 import path from 'path'
 import {Personal_Projects} from "./Database/Models/Personal_Projects.js";
-import './Database/db.js'
+import {db} from './Database/db.js'
 
 const app = express()
 const PORT = process.env.PORT || 5000
