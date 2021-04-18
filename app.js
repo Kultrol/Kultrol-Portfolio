@@ -17,12 +17,13 @@ app.route( '/api/portfolio' )
 			.catch( err => console.error(err))
 	} )
 
-if(process.env.Node_ENV === 'production'){
 	app.use(express.static('client/build'))
 	app.get('/*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, '/client/build/index.html'))
-	})
-}
+	res.sendFile(path.resolve(__dirname, '/client/build/index.html'))
+})
+// if(process.env.Node_ENV === 'production'){
+// 	)
+// }
 
 app.listen( PORT, () => {
 	console.log( "Server on http://localhost:5000" )
