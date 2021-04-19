@@ -1,5 +1,6 @@
 import express from 'express'
 import bodyParser from "body-parser";
+import nodemailer from "nodemailer";
 import path from 'path'
 import {Personal_Projects} from "./Database/Models/Personal_Projects.js";
 import {db} from './Database/db.js'
@@ -17,13 +18,11 @@ app.route( '/api/portfolio' )
 			.catch( err => console.error(err))
 	} )
 
-	app.use(express.static('client/build'))
-	app.get('/*', (req, res) => {
+app.use(express.static('client/build'))
+app.get('/*', (req, res) => {
 	res.sendFile(path.resolve(__dirname, '/client/build/index.html'))
 })
-// if(process.env.Node_ENV === 'production'){
-// 	)
-// }
+
 
 app.listen( PORT, () => {
 	console.log( "Server on http://localhost:5000" )
