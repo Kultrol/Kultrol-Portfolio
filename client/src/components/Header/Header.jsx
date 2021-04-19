@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Nav from "./Nav";
+import { Link } from "react-router-dom";
 
 export default function Header() {
 
@@ -25,11 +26,9 @@ export default function Header() {
 	return (
 		<>
 			<header className={`header`}>
-				<a href="https://github.com/Kultrol" className="ghAnchor">
-					<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt=""
-					     className="w-12"/>
+				<Link to={"/"}>
 					<h1 className={`ghText`}>Kultrol</h1>
-				</a>
+				</Link>
 				<span className={`lg:hidden`} onClick={() => {
 					setShowMenu( true )
 				}}>
