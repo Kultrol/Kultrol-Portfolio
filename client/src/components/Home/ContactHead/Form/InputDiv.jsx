@@ -1,6 +1,6 @@
 const InputDiv = () => {
 	return (
-		<div className="conInputDiv">
+		<div>
 			<input type="text" placeholder={`Enter Full Name`}/>
 			<input type="email" placeholder={`Enter Email`}/>
 		</div>

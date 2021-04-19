@@ -1,6 +1,6 @@
 const ContactCard = ( { elem, addClass } ) => {
 	return (
-		<div className={`conCard ${addClass}`}>
+		<div>
 			{elem}
 		</div>
 	)

@@ -4,7 +4,7 @@ import AboutHead from './AboutHead/AboutHead'
 
 export default function Home() {
 	return (
-		<main className="main">
+		<main>
 			<PortfolioHead/>
 			<AboutHead/>
 			<ContactHead/>
