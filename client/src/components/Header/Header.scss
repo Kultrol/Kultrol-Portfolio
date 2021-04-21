@@ -1,0 +1,11 @@
+@import './src/Config.scss';
+
+header{
+  display: flex;
+  justify-content: space-evenly;
+  width: inherit;
+  grid-area: head;
+  justify-items: center;
+  align-items: center;
+  border-bottom:$Dark_Colour 4px solid;
+}
