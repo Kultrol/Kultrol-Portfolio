@@ -1,18 +1,9 @@
 @import 'reset';
 @import './components/Header/Header';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600;1,800&display=swap');
 @import "Config";
 
 
-a{
-  text-decoration: none;
-  color: $Dark_Colour;
-}
-
-h1{
-  font-size: 2.25em;
-  font-weight: 700;
-}
 
 .app{
   height: 100vh;
@@ -21,8 +12,8 @@ h1{
   grid-template-rows: 0.75fr 6fr 1.25fr;
   grid-gap: 1.25em;
   font-family: $Main_Font;
-  background-color: $Primary_Colour;
-  color: $Dark_Colour;
+  background-color: $Dark_Colour;
+  color: #fff;
 }
 
 main{

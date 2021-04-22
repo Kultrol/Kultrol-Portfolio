@@ -1,20 +1,31 @@
 import Nav from "./Nav";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Header() {
 
+	const [showMenu ,setShowMenu] = useState(false)
+	let menu
+
+	if(setShowMenu){
+		menu = <>
+		</>
+
+	} else {
+		menu = <></>
+	}
 
 	return (
 		<>
 			<header>
 				<Link to={"/"}>
-					<h1>Kultrol</h1>
+					<h1>kultrol</h1>
 				</Link>
 				<span>
-		        {/*<img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" alt=""/>*/}
-	        </span>
-				<Nav/>
+					<h2>menu</h2>
+				</span>
 			</header>
+			{menu}
 		</>
 	)
 }

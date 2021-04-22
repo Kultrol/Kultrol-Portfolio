@@ -1,5 +1,47 @@
 $Primary_Colour: #FFCC00;
-$Secondary_Colour: #0033FF;
-$Comp1_Colour:#00B3FF;
-$Dark_Colour: #1A1400;
-$Main_Font: 'Roboto', sans-serif;
+$Secondary_Colour: #FF4D00;
+$Comp1_Colour:#B3FF00;
+$Dark_Colour: #151517;
+$Main_Font: 'Open Sans', sans-serif;
+
+%Underline {
+  position: relative;
+  padding: 4px 0;
+  ::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.1em;
+    top: 100%;
+    left: 0;
+    background: $Primary_Colour;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  :hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+a{
+  color:#fff;
+  text-decoration: none;
+  transition: 250ms;
+}
+
+h1{
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 1.75em;
+  font-weight: 500;
+}
+
+p{
+  font-size: 1.25em;
+  font-weight: 400;
+}
