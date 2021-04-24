@@ -3,13 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600;1,800&display=swap');
 @import "Config";
 
-
+html{
+  font-size: 10px;
+}
 
 .app{
   height: 100vh;
   display: grid;
   grid-template-areas:"head" "main" "footer";
-  grid-template-rows: 0.75fr 6fr 1.25fr;
+  grid-template-rows: 1.25fr 6fr 1.25fr;
   grid-gap: 1.25em;
   font-family: $Main_Font;
   background-color: $Dark_Colour;

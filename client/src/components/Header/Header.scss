@@ -1,29 +1,25 @@
 @import './src/Config.scss';
 
 header{
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
   width: inherit;
   grid-area: head;
   justify-items: center;
   align-items: center;
   font-weight: 300;
 
-  a{
-    @extend %Underline;
-  }
-
   h1{
-    font-size: 1.25em;
+    font-size: 2.25em;
     font-weight: 600;
   }
 
   span{
     h2{
-      font-size: 1.25em;
+      font-size: 1.75em;
       font-weight: 300;
     }
-    transition: 250ms;
     @extend %Underline;
     cursor: pointer;
   }
@@ -31,30 +27,103 @@ header{
 
 .menu{
     display: grid;
-    grid-template-areas: "title" "links";
-    grid-template-rows: 0.75fr 6fr;
+    grid-template-areas: "title" "links" "social";
+    grid-template-rows: 1fr 2fr 4fr;
+    grid-gap: 1em;
     position: fixed;
-    background-color: #fff;
-    color:$Dark_Colour;
+    background-color: $Dark_Colour;
+    color: #fff;
     width: 100vw;
     height: 100vh;
+    font-size: 4em;
+}
 
   .Title{
     width: inherit;
-    height: 4.85em;
+    height: 100%;
     grid-area: title;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-auto-columns: 1fr;
+    justify-items: end;
     align-items: center;
-    border-bottom: 4px $Dark_Colour solid;
+    div{
+      margin: 0 1em;
+      h2{
+        font-size: 0.5em;
+        font-weight: 300;
+        color: #8c8d91;
+      }
+      transition: 250ms;
+      @extend %Underline;
+      cursor: pointer;
+      :hover{
+        color: #f0efef;
+      }
+    }
   }
   .Links{
     display: grid;
     grid-area: links;
-    grid-auto-rows: 5em;
-    justify-items: center;
-    color: $Dark_Colour;
-    padding: .75em 0;
-    font-size: 2.75em;
+    grid-auto-rows: 1.25em;
+    justify-items: end;
+    align-items: start;
+    grid-gap: 0.35em;
+    margin: 0 1em;
+    border-bottom: #444848 solid 4px;
+    a{
+      @extend %Underline;
+    }
   }
+  .Social{
+    grid-area:social;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #8c8d91;
+    font-size: 0.45em;
+    margin: 0 2.25em;
+    overflow-wrap: break-word;
+    .contact{
+      display: grid;
+      grid-auto-rows: 2em;
+    }
+    .Social_Links{
+      display: grid;
+      grid-auto-rows: 2em;
+      justify-items: end;
+      align-items: center;
+      a{
+        color: #8c8d91;
+      }
+      :hover{
+        color: #f0efef;
+      }
+    }
+  }
+
+
+nav{
+  display: none;
+}
+.showMenu{
+  display: block;
+}
+
+@media screen and (min-width:1024px) {
+    .showMenu{
+      display: none;
+    }
+    .menu{
+      display: none;
+    }
+    nav{
+      display: grid;
+      ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.75em;
+        gap: 2em;
+        width: 100%;
+      }
+    }
 }
