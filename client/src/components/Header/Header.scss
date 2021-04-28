@@ -1,44 +1,47 @@
 @import './src/Config.scss';
 
 header{
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
   width: inherit;
   grid-area: head;
-  justify-items: center;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 4em;
+  padding: 0 2.85em;
   font-weight: 300;
-
   h1{
     font-size: 2.25em;
     font-weight: 600;
   }
-
   span{
     h2{
       font-size: 1.75em;
-      font-weight: 300;
+      font-weight: 400;
     }
     @extend %Underline;
     cursor: pointer;
   }
 }
-
+nav{
+  display: none;
+  font-weight: 400;
+  ul li{
+    @extend %Underline;
+  }
+}
 .menu{
     display: grid;
     grid-template-areas: "title" "links" "social";
     grid-template-rows: 1fr 2fr 4fr;
     grid-gap: 1em;
     position: fixed;
-    background-color: $Dark_Colour;
-    color: #fff;
+    background-color: $Light_Background_Colour;
+    color: $Light_Foreground_Colour;
     width: 100vw;
     height: 100vh;
     font-size: 4em;
 }
-
-  .Title{
+.Title{
     width: inherit;
     height: 100%;
     grid-area: title;
@@ -50,18 +53,18 @@ header{
       margin: 0 1em;
       h2{
         font-size: 0.5em;
-        font-weight: 300;
-        color: #8c8d91;
+        font-weight: 400;
+        color: $Secondary_Foreground_Colour;
       }
       transition: 250ms;
       @extend %Underline;
       cursor: pointer;
       :hover{
-        color: #f0efef;
+        color: $Hover_Secondary_Foreground_Colour;
       }
     }
   }
-  .Links{
+.Links{
     display: grid;
     grid-area: links;
     grid-auto-rows: 1.25em;
@@ -69,17 +72,24 @@ header{
     align-items: start;
     grid-gap: 0.35em;
     margin: 0 1em;
-    border-bottom: #444848 solid 4px;
+    padding: 1em 0;
+    border-bottom: $Secondary_Foreground_Colour solid 4px;
     a{
+      font-weight: 500;
+      color: $Hover_Secondary_Foreground_Colour;
+      &:hover{
+        color: $Secondary_Foreground_Colour;
+      }
       @extend %Underline;
     }
   }
-  .Social{
+.Social{
     grid-area:social;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    color: #8c8d91;
+    color: $Secondary_Foreground_Colour;
     font-size: 0.45em;
+    font-weight: 400;
     margin: 0 2.25em;
     overflow-wrap: break-word;
     .contact{
@@ -92,18 +102,13 @@ header{
       justify-items: end;
       align-items: center;
       a{
-        color: #8c8d91;
+        color: $Secondary_Foreground_Colour;
       }
       :hover{
-        color: #f0efef;
+        color: $Hover_Secondary_Foreground_Colour;
       }
     }
   }
-
-
-nav{
-  display: none;
-}
 .showMenu{
   display: block;
 }

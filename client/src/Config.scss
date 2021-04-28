@@ -1,8 +1,11 @@
-$Primary_Colour: #FFCC00;
-$Secondary_Colour: #FF4D00;
-$Comp1_Colour:#B3FF00;
-$Dark_Colour: #000;
-$Main_Font: 'Open Sans', sans-serif;
+$Light_Primary_Colour: #FFCC00;
+$Light_Secondary_Colour: #FF4D00;
+$Link_Colour: #a0e300;
+$Light_Background_Colour: #fff;
+$Light_Foreground_Colour: #000;
+$Secondary_Foreground_Colour:#8c8d91;
+$Hover_Secondary_Foreground_Colour:#434646;
+$Main_Font: 'Work Sans', sans-serif;
 
 
 %Underline {
@@ -15,7 +18,7 @@ $Main_Font: 'Open Sans', sans-serif;
     height: 0.1em;
     top: 100%;
     left: 0;
-    background: $Primary_Colour;
+    background: $Light_Primary_Colour;
     transition: transform 350ms;
     transform: scaleX(0);
     transform-origin: right;
@@ -27,7 +30,7 @@ $Main_Font: 'Open Sans', sans-serif;
 }
 
 a{
-  color:#fff;
+  color: $Light_Foreground_Colour;
   text-decoration: none;
   transition: 250ms;
 }

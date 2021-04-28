@@ -1,9 +1,8 @@
 import Nav from "./Nav";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitter, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import Links from './Menu/Links'
+import Social from "./Menu/Social";
 export default function Header() {
 
 	const [showMenu ,setShowMenu] = useState(false)
@@ -12,27 +11,8 @@ export default function Header() {
 	if(showMenu){
 		menu =
 			<div className={`menu`}>
-				<div className={`Title`}>
-					<div onClick={() => setShowMenu(false)}>
-						<h2>close</h2>
-					</div>
-				</div>
-				<div className={`Links`}>
-					<Link to={`/`} onClick={() => setShowMenu(false)}>Home</Link>
-					<Link to={`/portfolio`} onClick={() => setShowMenu(false)}>Portfolio</Link>
-					<Link to={`/contact`} onClick={() => setShowMenu(false)}>Contact</Link>
-				</div>
-				<div className={`Social`}>
-					<div className={`contact`}>
-						<h3>kevinkultrol@gmail.com</h3>
-					</div>
-					<div className={`Social_Links`}>
-						<a href="https://github.com/Kultrol">GitHub <FontAwesomeIcon icon={faGithub}/></a>
-						<a href="https://www.instagram.com/kultrol/">Instagram <FontAwesomeIcon icon={faInstagram}/></a>
-						<a href="https://www.linkedin.com/in/kevin-medina-1b372b177/">LinkedIn <FontAwesomeIcon icon={faLinkedin}/></a>
-						<a href="https://twitter.com/Kultrol">Twitter <FontAwesomeIcon icon={faTwitter}/></a>
-					</div>
-				</div>
+				<Links setShowMenu={(v) => setShowMenu(v)}/>
+				<Social/>
 			</div>
 
 	} else {

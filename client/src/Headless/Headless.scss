@@ -1,0 +1,39 @@
+@import '../Config.scss';
+
+.Heading{
+  font-weight: 700;
+  line-height: 0.95em;
+}
+.Sub_Heading{
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 0.95em;
+  text-align: left;
+  width: 100%;
+}
+
+.Par{
+  font-size: 0.85em;
+}
+
+.Section a{
+  margin: 0 0 2em 0;
+  width: 100%;
+  background-color: $Light_Background_Colour;
+  color: $Light_Primary_Colour;
+  border: none;
+  text-align: left;
+  font-size: 0.75em;
+  font-weight: 600;
+  font-style: italic;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+img{
+  width: 100%;
+  height: 8em;
+  object-fit: cover;
+  object-position: 0 -3em;
+}

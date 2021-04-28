@@ -1,6 +1,10 @@
 @import 'reset';
+@import './Headless/Headless';
 @import './components/Header/Header';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600;1,800&display=swap');
+@import './components/Home/Home';
+@import './components/Footer/footer';
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
 @import "Config";
 
 html{
@@ -11,24 +15,11 @@ html{
   height: 100vh;
   display: grid;
   grid-template-areas:"head" "main" "footer";
-  grid-template-rows: 1.25fr 6fr 1.25fr;
-  grid-gap: 1.25em;
+  grid-template-rows: 0.5fr 6fr 1.25fr;
+  grid-gap: 10em;
   font-family: $Main_Font;
-  background-color: $Dark_Colour;
-  color: #fff;
+  background-color: $Light_Background_Colour;
+  color: $Light_Foreground_Colour;
 }
 
-main{
-  width: inherit;
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-footer{
-  width: inherit;
-  grid-area: footer;
-}
 

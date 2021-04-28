@@ -1,0 +1,51 @@
+@import "./src/Config";
+
+footer {
+  width: inherit;
+  height: 100%;
+  grid-area: footer;
+  display: grid;
+  grid-gap: 0.5em;
+  justify-items: center;
+  padding: 2em 0.75em 0  0.75em;
+  margin-top: 1em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 12fr;
+  font-size: 4em;
+  background-color: $Light_Foreground_Colour;
+  border-top-left-radius: 0.75em;
+  border-top-right-radius: 0.75em;
+  color: $Light_Background_Colour;
+
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    li {
+      h2{
+        font-size: 0.75em;
+      }
+    .outLink {
+      font-style: normal;
+      font-size: 0.85em;
+      font-weight: 500;
+      color: $Light_Secondary_Colour;
+      transition: 150ms;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .inLink{
+      font-style: normal;
+      font-size: 0.85em;
+      font-weight: 500;
+      color: $Light_Primary_Colour;
+      transition: 150ms;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+}
