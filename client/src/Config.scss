@@ -1,11 +1,24 @@
-$Light_Primary_Colour: #FFCC00;
-$Light_Secondary_Colour: #FF4D00;
-$Link_Colour: #a0e300;
-$Light_Background_Colour: #fff;
-$Light_Foreground_Colour: #000;
-$Secondary_Foreground_Colour:#8c8d91;
-$Hover_Secondary_Foreground_Colour:#434646;
-$Main_Font: 'Work Sans', sans-serif;
+
+$_cssvars: ();
+@mixin cssvars($css_variables, $prefix: pf) {
+  $_cssvars: map-merge( $_cssvars, $css_variables ) !global;
+}
+@function cssvar($name, $prefix: pf) {
+  @return var(--#{$prefix}-#{$name}, map-get( $_cssvars, $name ));
+} // Use Variables with changed option I.E => @include cssvar(SomeVar, SomeOption)
+@mixin cssvar ($name, $value: '', $prefix: pf) {
+  --#{$prefix}-#{$name}: #{$value};
+} // Use variables
+@include cssvars((
+        Light-Primary-Colour: #FFCC00,
+        Light-Secondary-Colour: #FF4D00,
+        Link-Colour: #a0e300,
+        Light-Background-Colour: #fff,
+        Light-Foreground-Colour: #000,
+        Secondary-Foreground-Colour:#8c8d91,
+        Hover-Secondary-Foreground-Colour:#434646,
+        Main-Font: 'Work Sans',
+)) // Create Variables
 
 
 %Underline {
@@ -18,7 +31,7 @@ $Main_Font: 'Work Sans', sans-serif;
     height: 0.1em;
     top: 100%;
     left: 0;
-    background: $Light_Primary_Colour;
+    background: cssvar(Light-Primary-Colour);
     transition: transform 350ms;
     transform: scaleX(0);
     transform-origin: right;
@@ -30,7 +43,7 @@ $Main_Font: 'Work Sans', sans-serif;
 }
 
 a{
-  color: $Light_Foreground_Colour;
+  color: cssvar(Light-Foreground-Colour);
   text-decoration: none;
   transition: 250ms;
 }
@@ -49,3 +62,4 @@ p{
   font-size: 1.25em;
   font-weight: 400;
 }
+

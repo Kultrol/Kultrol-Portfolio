@@ -16,16 +16,15 @@
   font-size: 0.85em;
 }
 
-.Section a{
-  margin: 0 0 2em 0;
-  width: 100%;
-  background-color: $Light_Background_Colour;
-  color: $Light_Primary_Colour;
-  border: none;
+.NavLink{
+  @extend %Underline
+}
+.ALink{
+  color: cssvar(Light-Primary-Colour);
   text-align: left;
-  font-size: 0.75em;
   font-weight: 600;
   font-style: italic;
+  width: 100%;
   &:hover{
     text-decoration: underline;
   }

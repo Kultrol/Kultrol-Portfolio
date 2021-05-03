@@ -1,14 +1,14 @@
-import { Link } from 'react-router-dom'
+import NavLink from "../../Headless/Header/NavLink";
 
 export default function Nav( ) {
 	return (
 		<>
 			<nav>
 				<ul>
-					<li> <Link to="/">Home</Link></li>
-					<li> <Link to="/portfolio">Portfolio</Link></li>
-					<li> <Link to="/about">About</Link></li>
-					<li> <Link to="/Contact">Contact</Link></li>
+					<NavLink link={"/"} text={"Home"}/>
+					<NavLink link={"/portfolio"} text={"Portfolio"}/>
+					<NavLink link={"/about"} text={"About"}/>
+					<NavLink link={"/contact"} text={"Contact"}/>
 				</ul>
 			</nav>
 		</>

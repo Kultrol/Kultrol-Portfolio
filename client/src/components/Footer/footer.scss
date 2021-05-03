@@ -12,10 +12,10 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 12fr;
   font-size: 4em;
-  background-color: $Light_Foreground_Colour;
+  background-color: cssvar(Light-Foreground-Colour);
   border-top-left-radius: 0.75em;
   border-top-right-radius: 0.75em;
-  color: $Light_Background_Colour;
+  color: cssvar(Light-Background-Colour);
 
 
   ul {
@@ -30,7 +30,7 @@ footer {
       font-style: normal;
       font-size: 0.85em;
       font-weight: 500;
-      color: $Light_Secondary_Colour;
+      color: cssvar(Light-Secondary-Colour);
       transition: 150ms;
       &:hover{
         text-decoration: underline;
@@ -40,7 +40,7 @@ footer {
       font-style: normal;
       font-size: 0.85em;
       font-weight: 500;
-      color: $Light_Primary_Colour;
+      color: cssvar(Light-Primary-Colour);
       transition: 150ms;
       &:hover{
         text-decoration: underline;

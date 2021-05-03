@@ -17,9 +17,9 @@ html{
   grid-template-areas:"head" "main" "footer";
   grid-template-rows: 0.5fr 6fr 1.25fr;
   grid-gap: 10em;
-  font-family: $Main_Font;
-  background-color: $Light_Background_Colour;
-  color: $Light_Foreground_Colour;
+  font-family: cssvar(Main-Font), sans-serif;
+  background-color: cssvar(Light-Background-Colour);
+  color: cssvar(Light-Foreground-Colour);
 }
 
 
