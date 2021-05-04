@@ -22,4 +22,9 @@ html{
   color: cssvar(Light-Foreground-Colour);
 }
 
+@media only screen and (min-width: 1250px){
+  .app{
+    grid-gap: 20em;
+  }
+}
 

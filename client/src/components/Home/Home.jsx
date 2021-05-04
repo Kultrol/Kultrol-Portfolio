@@ -9,7 +9,7 @@ export default function Home() {
 		<main>
 			<div className={'Section'}>
 				<Heading text={`A Web Developer in Training`}/>
-				<Image src={`https://images.unsplash.com/photo-1619258252737-4a44a77c1927?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60`} alt={``}/>
+				<Image src={`https://images.unsplash.com/photo-1600496461900-3f1b74fb40d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=930&q=80`} alt={``}/>
 				<div>
 					<Par text={`Hi, I'm Kevin, a web developer with a passion for creating and exploring new ideas.`}/>
 					<ALink link={`/portfolio`} text={`Learn More About Me`}/>
@@ -20,28 +20,22 @@ export default function Home() {
 				<SubHeading text={`Current Projects`}/>
 				<div className={`curProjectGrid`}>
 					<div className={`caption`}>
-						<Image src={`https://images.unsplash.com/photo-1619258252737-4a44a77c1927?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60`} alt={``}/>
+						<Image src={`https://images.unsplash.com/photo-1490814525860-594e82bfd34a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1626&q=80`} alt={``}/>
 						<a href="#">Bar & Love</a>
 						<SubHeading text={'Local Bar with a flavour of love'}/>
 					</div>
 					<div className={`caption`}>
-						<Image src={`https://images.unsplash.com/photo-1619258252737-4a44a77c1927?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60`} alt={``}/>
+						<Image src={`https://images.unsplash.com/photo-1578393098337-5594cce112da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=873&q=80://images.unsplash.com/photo-1619258252737-4a44a77c1927?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60`} alt={``}/>
 						<a href="#">Bar & Love</a>
 						<SubHeading text={'Local Bar with a flavour of love'}/>
 					</div>
 					<div className={`caption`}>
-						<Image src={`https://images.unsplash.com/photo-1619258252737-4a44a77c1927?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60`} alt={``}/>
+						<Image src={`https://images.unsplash.com/photo-1529432337323-223e988a90fb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1266&q=80://images.unsplash.com/photo-1619258252737-4a44a77c1927?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60`} alt={``}/>
 						<a href="#">Bar & Love</a>
 						<SubHeading text={'Local Bar with a flavour of love'}/>
 					</div>
 				</div>
 				<ALink link={`/portfolio`} text={`See All Projects`}/>
-			</div>
-			<div className={'Section'}>
-				<SubHeading text={`Good Design Is Good Business.`}/>
-				<Image src={`https://images.unsplash.com/photo-1619258252737-4a44a77c1927?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60`} alt={``}/>
-				<Par text={`Good Design is the corner stone of any great product. Good Design ensures communication, interaction, and accessibility.`}/>
-				<ALink link={`/portfolio`} text={`Let's Work together to achieve your creative vision with Good Design`}/>
 			</div>
 			<div className={'Section'}>
 				<SubHeading text={`What's It Made Of? `}/>
@@ -54,6 +48,12 @@ export default function Home() {
 						<li><a href="https://sass-lang.com/" id={`sCss`}>SCSS</a></li>
 					</ul>
 				</div>
+			</div>
+			<div className={'Section'}>
+				<SubHeading text={`Good Design Is Good Business.`}/>
+				<Image src={`https://images.unsplash.com/photo-1548080819-84b0d779e8e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80://images.unsplash.com/photo-1619258252737-4a44a77c1927?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60`} alt={``}/>
+				<Par text={`Good Design is the corner stone of any great product. Good Design ensures communication, interaction, and accessibility.`}/>
+				<ALink link={`/portfolio`} text={`Let's Work together to achieve your creative vision with Good Design`}/>
 			</div>
 		</main>
 	)
