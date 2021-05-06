@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Links from './Menu/Links'
 import Social from "./Menu/Social";
+import './Header.scss'
+
 export default function Header() {
 
 	const [showMenu ,setShowMenu] = useState(false)

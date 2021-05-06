@@ -3,6 +3,8 @@ import Heading from "../../Headless/Heading";
 import ALink from "../../Headless/ALink";
 import Image from "../../Headless/Image";
 import SubHeading from "../../Headless/SubHeading";
+import CurrentProjects from "./CurrentProjects";
+import './Home.scss'
 
 export default function Home() {
 	return (
@@ -15,28 +17,7 @@ export default function Home() {
 					<ALink link={`/portfolio`} text={`Learn More About Me`}/>
 				</div>
 			</div>
-			<div className={'Section CurrentProjects'}>
-				<Par text={`I'm in constant development, whether its new or current, I try to optimize, enhance, and improve the experience of the project for the user`}/>
-				<SubHeading text={`Current Projects`}/>
-				<div className={`curProjectGrid`}>
-					<div className={`caption`}>
-						<Image src={`https://images.unsplash.com/photo-1490814525860-594e82bfd34a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1626&q=80`} alt={``}/>
-						<a href="#">Bar & Love</a>
-						<SubHeading text={'Local Bar with a flavour of love'}/>
-					</div>
-					<div className={`caption`}>
-						<Image src={`https://images.unsplash.com/photo-1578393098337-5594cce112da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=873&q=80://images.unsplash.com/photo-1619258252737-4a44a77c1927?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60`} alt={``}/>
-						<a href="#">Bar & Love</a>
-						<SubHeading text={'Local Bar with a flavour of love'}/>
-					</div>
-					<div className={`caption`}>
-						<Image src={`https://images.unsplash.com/photo-1529432337323-223e988a90fb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1266&q=80://images.unsplash.com/photo-1619258252737-4a44a77c1927?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60`} alt={``}/>
-						<a href="#">Bar & Love</a>
-						<SubHeading text={'Local Bar with a flavour of love'}/>
-					</div>
-				</div>
-				<ALink link={`/portfolio`} text={`See All Projects`}/>
-			</div>
+			<CurrentProjects/>
 			<div className={'Section'}>
 				<SubHeading text={`What's It Made Of? `}/>
 				<div>

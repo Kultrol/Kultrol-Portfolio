@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Heading from "../../Headless/Heading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import './footer.scss'
 
 
 const Footer = () => {
