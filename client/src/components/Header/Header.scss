@@ -30,6 +30,7 @@ nav{
   }
 }
 .menu{
+    z-index: 100;
     display: grid;
     grid-template-areas: "title" "links" "social";
     grid-template-rows: 1fr 2fr 4fr;
