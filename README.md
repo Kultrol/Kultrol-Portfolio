@@ -1,14 +1,17 @@
 ## Kultrol-Portfolio
 
-See my progress at - https://kultrol.herokuapp.com
+*Images and Projects are Currently just placeholders; expect them to be filled soon*
 
+
+See my progress at - https://kultrol.herokuapp.com
+Website Version 1.0 is Live 
 
 My current build for my portfolio site
 
 --Home Page ✅
 --Portfolio Page ✅
---About Page ❌
---Contact Page ❌
+--About Page ✅
+--Contact Page ✅
 
 
 
@@ -23,9 +26,6 @@ Technologies -
   
 Current Goals -
 
-  --Complete About Page,
-  --Complete Contact Page
-    -Added a Email Form,
   --Clean Up Remaining Styles
     
 Future Features-
