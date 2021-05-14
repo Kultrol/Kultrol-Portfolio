@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
 import path from 'path'
 import {Personal_Projects} from "./Database/Models/Personal_Projects.js";
+import { User_Data } from "./Database/Models/User_Data.js";
 import {db} from './Database/db.js'
 
 const app = express()
@@ -17,6 +18,13 @@ app.route( '/api/portfolio' )
 			.then( r => res.send( r ) )
 			.catch( err => console.error(err))
 	} )
+
+app.route( '/api/skills')
+	.get((req,res) => {
+		User_Data.find({})
+			.then( r => res.send( r ) )
+			.catch( err => console.error(err))
+	})
 
 app.route('/api/')
 	.get((req, res) => {
