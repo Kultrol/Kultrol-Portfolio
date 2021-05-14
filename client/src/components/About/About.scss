@@ -1,0 +1,216 @@
+@import '../client/src/Config';
+
+.About{
+  margin: 0 2.75em;
+}
+
+
+.Description{
+  display: grid;
+      grid-column: 1/2;
+      grid-row: 1/3;
+      grid-template-rows: 1fr;
+      grid-row-gap: 2em;
+      padding: 0 0 3em 0;
+      border-bottom: 4px cssvar(Light-Foreground-Colour) solid;
+      img{
+        grid-row: 1/3;
+        grid-column: 1/3;
+        --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        height: 50em;
+      }
+      h2{
+        font-weight: 700;
+        grid-row: 2/3;
+        grid-column: 1/3;
+        font-size: 3.5em;
+        color: cssvar(Light-Background-Colour);
+        margin: 0.25em 0.5em;
+        z-index: 10;
+      }
+      p{
+        grid-row: 3/4;
+        grid-column: 1/3;
+        font-weight: 600;
+        font-size: 3em;
+        z-index: 10;
+      }
+}
+.skillSet{
+  div{
+    display: grid;
+    grid-row-gap: 2em;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 4em 0;
+    &:nth-child(1){
+      margin: 0 5em;
+    }
+    border-bottom: 4px solid cssvar(Light-Foreground-Colour);
+    h2{
+      font-size: 4em;
+      font-weight: 600;
+    }
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.75em;
+      li a{
+        font-size: 3.5em;
+        font-weight: 500;
+        color: cssvar(Light-Secondary-Colour);
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.workflow{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 0;
+  h2{
+    font-size: 4em;
+    font-weight: 600;
+  }
+  ol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin: 2em 2.75em;
+    list-style: decimal;
+    li{
+      color: cssvar(Light-Secondary-Colour);
+      font-size: 2.5em;
+      font-weight: 500;
+      span{
+        color: cssvar(Light-Foreground-Colour);
+      }
+    }
+  }
+}
+.contactMe{
+  margin: 10em 0 0 0;
+  a{
+    font-size: 6em;
+  }
+}
+
+
+@media only screen and (min-width: 750px){
+  .About{
+    margin: 0 7em;
+  }
+  .Description{
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 35em 0.25fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 3em;
+    img{
+      grid-row: 1/2;
+      grid-column: 1/2;
+      height: 100%;
+    }
+    h2{
+      grid-row: 1/2;
+      grid-column: 2/3;
+      margin: 0;
+      font-size: 5em;
+      color: cssvar(Light-Foreground-Colour);
+      align-self: start;
+    }
+    p{
+      align-self: start;
+      font-size: 3.5em;
+      grid-row: 2/3;
+      grid-column: 1/3;
+    }
+  }
+  .skillSet{
+    display: grid;
+    border-bottom: 4px solid cssvar(Light-Foreground-Colour);
+    justify-items: center;
+    align-items: start;
+    div{
+      &:nth-child(1){
+        grid-column: 1/2;
+        border-bottom: none;
+      }
+      &:nth-child(2){
+        grid-column: 2/3;
+        border-bottom: none;
+      }
+    }
+  }
+  .workflow{
+    ol{
+      width: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      grid-column-gap: 4.25em;
+    }
+  }
+}
+@media only screen and (min-width: 1024px){
+  .About{
+    margin: 0 10em;
+  }
+  .Description{
+    grid-column-gap: 3em;
+    //grid-row-gap: 2em;
+    padding: 0 0 5em 0;
+    h2{
+      margin: 0 0.5em;
+    }
+    p{
+      margin: 0 0.75em;
+    }
+  }
+  .workflow{
+    ol{
+      li{
+        font-size: 2.75em;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1250px){
+  .About{
+    margin: 0 15em;
+  }
+  .Description{
+    grid-row-gap: 25em;
+    margin: 0 4em;
+    padding: 0 0 10em 0;
+    img{
+      height: 50em;
+    }
+    h2{
+      font-size: 7.5em;
+    }
+    p{
+      font-size: 5.5em;
+    }
+  }
+  .workflow{
+    ol{
+      grid-column-gap: 6em;
+      li{
+        font-size: 4em;
+      }
+    }
+  }
+}
+
