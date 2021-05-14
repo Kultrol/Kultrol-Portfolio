@@ -6,7 +6,7 @@ const Social = () => {
 	return(
 		<div className={`Social`}>
 			<div className={`contact`}>
-				<h3>kevinkultrol@gmail.com</h3>
+				<h3><a href="mailto:kevinkultrol@gmail.com">kevinkultrol@gmail.com</a></h3>
 			</div>
 			<div className={`Social_Links`}>
 				<a href="https://github.com/Kultrol">GitHub <FontAwesomeIcon icon={faGithub}/></a>

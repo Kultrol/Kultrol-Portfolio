@@ -96,6 +96,12 @@ nav{
     .contact{
       display: grid;
       grid-auto-rows: 2em;
+      a{
+        color: cssvar(Secondary-Foreground-Colour);
+      }
+      :hover{
+        color: cssvar(Hover-Secondary-Foreground-Colour);
+      }
     }
     .Social_Links{
       display: grid;
