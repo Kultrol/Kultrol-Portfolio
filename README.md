@@ -1,40 +1,20 @@
-## Kultrol-Portfolio
-
-*Images and Projects are Currently just placeholders; expect them to be filled soon*
-
-
-See my progress at - https://kultrol.herokuapp.com
-
-Website Version 1.0 is Live 
-
-My current build for my portfolio site
-
---Home Page ✅
---Portfolio Page ✅
---About Page ✅
---Contact Page ✅
-
-
-
-Technologies -
-
-  --ReactJS,
-  --MongoDB,
-  --NodeJs,
-  --ExpressJS,
-  --SASS
+# NOTICE - SITE IS TRANSITIONING FROM CREATE-REACT-APP -> CREATE-NEXT-APP 
+# COMPLETING FUNCTIONALITY BY THE END OF NOVEMBER
   
-  
-Current Goals -
+## Current link to site is a preivously unfinished build -> http://kultrol.herokuapp.com
 
-  --Clean Up Remaining Styles
-    
-Future Features-
+### * Goals
+- Transition next, 
+- create a single page to display projects, 
+- add blog, 
+- info about me, 
+- and contact info.
 
-  --Login Page
-    -Admin Only,
-  --Home-Built CMS,
-  --Change Images,
-  --Dark Mode,
+TECH USED - 
+ - NEXT
+ - MONGODB
+ - SCSS
+ - JEST (TESTING)
+ - TYPESCRIPT
   
-  
+ 
