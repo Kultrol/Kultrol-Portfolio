@@ -52,5 +52,6 @@ TECH USED -
  - SCSS
  - JEST (TESTING)
  - TYPESCRIPT
+ - GSAP
   
  
