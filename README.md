@@ -1,5 +1,5 @@
 # NOTICE - SITE IS TRANSITIONING FROM CREATE-REACT-APP -> CREATE-NEXT-APP 
-# COMPLETING FUNCTIONALITY BY THE END OF NOVEMBER
+# COMPLETING FUNCTIONALITY BY THE END OF JULY
   
 ## Current link to site is a preivously unfinished build -> http://kultrol.herokuapp.com
 
